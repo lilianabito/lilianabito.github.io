@@ -1,227 +1,359 @@
-/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: 'Helvetica Neue', sans-serif;
-    background-color: #fff;
-    color: #222;
-  }
-  
-  /* Layout and sections */
-  .container {
-    display: flex;
-    transition: transform 0.6s ease;
-    width: 300vw; /* assuming 3 sections like home, projects, about */
-    height: 100vh;
-  }
-  
-  .page {
-    width: 100vw;
-    height: 100vh;
-    flex-shrink: 0;
-    padding: 2rem;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-  
-  .page.home {
-    background-color: #f5f5f5;
-  }
-  
-  .page#about {
-    background-color: #fcfcfc;
-  }
-  
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    padding: 0 2rem;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    z-index: 10;
-  }
-  
-  .logo a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #222;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    margin-left: 1rem;
-    color: #666;
-    font-weight: 500;
-  }
-  
-  /* Project grid on home */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding-top: 80px;
-  }
-  
-  .project-thumb {
-    cursor: pointer;
-    perspective: 1000px;
-  }
-  
-  .project-card {
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transform-style: preserve-3d;
-    transition: transform 0.2s ease-out;
-    height: 100%;
-  }
-  
-  .thumb-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .thumb-content {
-    padding: 1rem;
-  }
-  
-  .thumb-inner h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .thumb-inner p {
-    font-size: 0.9rem;
-    color: #444;
-    margin-bottom: 1rem;
-  }
-  
-  .project-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-  }
-  
-  .tag {
-    background-color: #eee;
-    color: #555;
-    padding: 0.25rem 0.5rem;
-    border-radius: 8px;
-    font-size: 0.75rem;
-  }
-  
-  .open-icon {
-    font-size: 1.2rem;
-    color: #999;
-  }
-  
-  /* Project detail sections */
-  .project-full {
-    padding-top: 80px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .project-thumb-full {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .project-thumb-image img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  }
-  
-  .project-thumb-text h1 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-  
-  .project-section {
-    color: #aaa;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-  }
-  
-  .project-motto {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .project-description {
-    font-size: 1rem;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-  
-  .project-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .meta-label {
-    font-weight: bold;
-    display: block;
-    font-size: 0.85rem;
-  }
-  
-  .meta-value {
-    font-size: 0.95rem;
-  }
-  
-  /* Smooth transitions */
-  .page {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-  
-  /* Scroll snapping on project page (optional) */
-  /* 
-  #projects {
-    scroll-snap-type: y mandatory;
-  }
-  .project-full {
-    scroll-snap-align: start;
-  }
-  */
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .project-thumb-full {
-      padding: 1rem;
-    }
-  
-    .project-details {
-      padding: 1rem;
-    }
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}  
+
+.logo a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 300%; /* 3 pages: home, projects, about */
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+/*Hide scrollbars*/
+
+/* For all scrollable elements */
+html, body, .page, .container {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE 10+ */
+  overflow-y: scroll;            /* Still allow scroll */
+}
+
+/* For WebKit browsers */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+.page::-webkit-scrollbar,
+.container::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Opera */
+}
+
+
+
+/* Home scrolls vertically with thumbnail grid */
+#home {
+  background: #fdfdfd;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-thumb {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-thumb:hover {
+  transform: scale(1.01);
+}
+
+.project-thumb img {
+  width: auto;
+  max-width: 90%;
+  object-fit: cover;
+}
+
+.project-thumb h2 {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}  
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  width: 100%;
+  height: 80%;
+}
+
+.thumb-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.thumb-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fefefe;
+}
+
+.thumb-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thumb-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.open-icon {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  color: #0073e6;
+  transition: transform 0.2s ease;
+}
+
+.project-thumb:hover .open-icon {
+  transform: translateX(5px);
+}
+
+
+/*cards follow cursor*/
+
+.project-thumb {
+  perspective: 1000px;
+}
+
+.project-card {
+  transition: transform 0.1s ease;
+  will-change: transform;
+}
+
+.project-thumb:hover .project-card {
+  transition: none;
+}
+
+
+
+#projects {
+  background: #eaeaea;
+  overflow-y: auto;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.project-full{
+  position:relative;
+  height:200vh;
+  scroll-snap-align:start;
+}
+
+.project-thumb-full{
+  position:sticky;
+  top:0;
+  height:100vh;
+  width:100%;
+  display:flex;
+  z-index:0;                       /* sits behind details */
+}
+
+.project-thumb-image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.project-thumb-image img {
+  max-height: 70vh;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.project-thumb-text {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+.project-thumb-text h1 {
+  font-size: 3rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+
+.project-details{
+  position:relative;
+  height:100vh;                    /* exactly one screen */
+  padding:60px 40px;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(3px);
+  z-index:2;                       /* above thumbnail */
+  overflow:auto;
+}
+
+.project-full.is-visible .project-thumb-image{
+  transform:translateX(-30px);
+  transition:transform .6s ease;
+}
+.project-full.is-visible .project-thumb-text{
+  transform:translateX(30px);
+  transition:transform .6s ease;
+}
+.project-full:not(.is-visible) .project-thumb-image,
+.project-full:not(.is-visible) .project-thumb-text{
+  transform:translateX(0);
+}
+
+.project-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.project-section {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.project-motto {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 2.5rem;
+}
+
+.project-meta {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-meta div {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.meta-value {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #222;
+}
+
+.next-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+.next-button:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+
+/*project backgrounds*/
+
+.bg-project1 {
+  background-color: #739c90; /* Soft yellow */
+}
+
+.bg-project2 {
+  background-color: #e6f7ff; /* Soft blue */
+}
+
+.bg-project3 {
+  background-color: #f9e6ff; /* Soft pink-purple */
+}

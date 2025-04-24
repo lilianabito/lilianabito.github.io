@@ -5,6 +5,29 @@ const container = document.querySelector('.container');
 const pages = document.querySelectorAll('.page');
 const logo = document.getElementById('logo-home');  // Get the logo element
 
+/* --- Highlight visible project (for parallax) --- */
+const projects = document.querySelectorAll('.project-full');
+const projWrap  = document.getElementById('projects');
+
+function setVisible(){
+  projects.forEach(p=>{
+    const rect = p.getBoundingClientRect();
+    const mid  = window.innerHeight/2;
+    p.classList.toggle('is-visible', rect.top<=mid && rect.bottom>=mid);
+  });
+}
+projWrap.addEventListener('scroll', setVisible);
+window.addEventListener('load', setVisible);
+
+/* --- Click‑to‑next --- */
+function scrollToNext(btn){
+  const cur = btn.closest('.project-full');
+  const nxt = cur.nextElementSibling;
+  if(nxt && nxt.classList.contains('project-full')){
+    nxt.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
 // Event listener for logo (Back to Home behavior)
 logo.addEventListener('click', (e) => {
   e.preventDefault();
