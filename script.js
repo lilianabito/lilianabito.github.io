@@ -19,14 +19,38 @@ function setVisible(){
 projWrap.addEventListener('scroll', setVisible);
 window.addEventListener('load', setVisible);
 
+/* ---- slide thumbnail down while details scroll ---- */
+projWrap.addEventListener('scroll', () => {
+  projects.forEach(project=>{
+    const thumb   = project.querySelector('.project-thumb-full');
+    const details = project.querySelector('.project-details');
+
+    /* how far has the user scrolled inside this project? */
+    const detailRect = details.getBoundingClientRect();
+    const viewportH  = window.innerHeight;
+
+    // amount scrolled inside current project (0‑1)
+    let progress = 0;
+    if(detailRect.top < viewportH && detailRect.bottom > 0){
+      const total = details.scrollHeight - viewportH;
+      const inside = Math.min(Math.max(-detailRect.top,0), total);
+      progress = inside / (total || 1);
+    }
+
+    // translate thumbnail up to 60 px (feel free to tweak)
+    const slide = progress * 60;
+    thumb.style.transform = `translateY(${slide}px)`;
+  });
+});
+
+
 /* --- Click‑to‑next --- */
 function scrollToNext(btn){
-  const cur = btn.closest('.project-full');
+  const cur = btn.closest('.next-page, .project-full');
   const nxt = cur.nextElementSibling;
-  if(nxt && nxt.classList.contains('project-full')){
-    nxt.scrollIntoView({behavior:'smooth',block:'start'});
-  }
+  if(nxt){ nxt.scrollIntoView({behavior:'smooth', block:'start'}); }
 }
+
 
 // Event listener for logo (Back to Home behavior)
 logo.addEventListener('click', (e) => {
@@ -107,3 +131,4 @@ function scrollToNext(currentButton) {
     nextSection.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
