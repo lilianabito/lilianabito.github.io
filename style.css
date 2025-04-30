@@ -51,6 +51,8 @@ body, html {
   background-color: #f5f5f5;
 }
 
+
+
 /*Hide scrollbars*/
 
 /* For all scrollable elements */
@@ -192,7 +194,7 @@ body::-webkit-scrollbar,
 .open-icon {
   font-size: 1.5rem;
   align-self: flex-start;
-  color: #0073e6;
+  color: #805343;
   transition: transform 0.2s ease;
 }
 
@@ -384,6 +386,14 @@ body::-webkit-scrollbar,
   border-radius: 8px;
 }
 
+.split-number-3 {
+  font-size: 1.5rem;
+  background: #3b1fc9;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+}
+
 .split-description {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -477,6 +487,33 @@ body::-webkit-scrollbar,
   font-size: 1.2rem;
   line-height: 1.6;
 }
+
+.project-videos {
+  position: relative;
+  left: 40%;
+  transform: translateX(-40%);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 130%;
+  max-width: 1400px;
+  margin: 6rem 0;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
 
 
 /* blank 100 vh panel */
@@ -630,3 +667,41 @@ body::-webkit-scrollbar,
   max-height: 40px;
   max-width: 100px;
 }
+
+.pdf-preview {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.pdf-preview iframe {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #480500;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.download-link:hover {
+  color: #703930;
+}
+
+.pdf-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #421818;
+  text-align: center;
+}
+
