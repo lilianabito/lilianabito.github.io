@@ -1,8 +1,8 @@
 URL: https://lilianabito.github.io/
 
-Topic description: This will be a portfolio website.
+Topic description: This will be a portfolio website. On the main page, you can see thumbnails of the projects with a thumbnail image, brief description, and tokens about the project topic. If you click on a project, it scrolls to the right, on the project details page. Here you can see the design process and other information about them. On the about page, you can see background information about me, download my portfolio with previos works, and contact me via email.
 
-Source of codes: I used some things that I learned in class, and for the more complex parts (interactions in js, special alignments) I used ChatGPT to help me, then modyfied the code to my liking.
+Source of codes: I used some things that I learned in class, and for the more complex parts (interactions in js, special alignments) I used ChatGPT to help me. As it rarely gave a perfect code, I went through them and adjusted the lines to my liking.
 
 Source of images (software icons):
 https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/512px-Adobe_Photoshop_CC_icon.svg.png?20200616073617
@@ -16,7 +16,7 @@ https://wpguru.co.uk/wp-content/uploads/2013/09/Javascript-Logo.png
 https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg
 https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/292px-Javascript_badge.svg.png?20160504163251
 
-What kind of js code did you use: I used ChatGPT and modyfied where needed.
+What kind of js code did you use: I used ChatGPT and modified where needed.
 
 What kind of font did you use: Poppins (bold) for the titles and Lato for the text body.
 
