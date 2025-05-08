@@ -16,7 +16,7 @@ https://wpguru.co.uk/wp-content/uploads/2013/09/Javascript-Logo.png
 https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg
 https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/292px-Javascript_badge.svg.png?20160504163251
 
-What kind of js code did you use: I used ChatGPT and modified where needed.
+What kind of js code did you use: I used ChatGPT and modified where needed. I used it for the form, navigation (it "scrolls" from left to right when jumping between pages), click to next button on projects page, thumbnails' hover effect on home page.
 
 What kind of font did you use: Poppins (bold) for the titles and Lato for the text body.
 
