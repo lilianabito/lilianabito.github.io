@@ -229,6 +229,29 @@ body::-webkit-scrollbar,
 }
 
 
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column; /* Stack image above content */
+    height: auto; /* Allow height to expand naturally */
+  }
+
+  .thumb-image,
+  .thumb-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .thumb-image img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .thumb-inner {
+    padding: 20px;
+  }
+}
+
+
 
 #projects {
   background: #eaeaea;
@@ -582,6 +605,95 @@ body::-webkit-scrollbar,
 .bg-project3 {
   background-color: #A492FF; /* Soft pink-purple */
 }
+
+@media (max-width: 768px) {
+  /* Stack image and text vertically in split sections */
+  .project-split {
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    transform: none;
+    padding: 0 20px;
+  }
+
+  .project-split-text,
+  .project-split-image {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .project-split-image img {
+    width: 100%;
+  }
+
+  /* Adjust thumbnail section */
+  .project-thumb-full {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .project-thumb-image,
+  .project-thumb-text {
+    padding: 20px;
+    flex: unset;
+    width: 100%;
+  }
+
+  .project-thumb-text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* Adjust meta section to wrap cleanly */
+  .project-meta {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-meta div {
+    max-width: 100%;
+  }
+
+  /* Reduce padding in details */
+  .project-details {
+    padding: 80px 20px;
+  }
+
+  /* Typography scale down */
+  .project-motto {
+    font-size: 1.75rem;
+  }
+
+  .split-title {
+    font-size: 1.5rem;
+  }
+
+  .split-description {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+  .next-button {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+  }
+
+  .project-image {
+    padding: 0 16px;
+    margin: 1rem auto;
+    width: 100%;
+  }
+
+  .project-image img {
+    border-radius: 10px;
+  }
+}
+
+
 
 
 /*About page*/
