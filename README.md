@@ -2,6 +2,8 @@ URL: https://lilianabito.github.io/
 
 Topic description: This will be a portfolio website. On the main page, you can see thumbnails of the projects with a thumbnail image, brief description, and tokens about the project topic. If you click on a project, it scrolls to the right, on the project details page. Here you can see the design process and other information about them. On the about page, you can see background information about me, download my portfolio with previos works, and contact me via email.
 
+Technical details: Instead of multiple html files for the different pages, I used one html and stacked sections inside it. This allowed me to create the scroll effect between pages.
+
 Source of codes: I used some things that I learned in class, and for the more complex parts (interactions in js, special alignments) I used ChatGPT to help me. As it rarely gave a perfect code, I went through them and adjusted the lines to my liking.
 
 Source of images (software icons):
