@@ -135,3 +135,18 @@ function scrollToNext(currentButton) {
 
 //carousel//
 
+//scroll to portfolio//
+
+const portfolioBtn = document.querySelector('.scroll-to-portfolio');
+  const portfolioSection = document.querySelector('#portfolio');
+
+  // Show only if on #about section
+  if (window.location.hash === "#about" || document.getElementById("about")) {
+    portfolioBtn.style.display = 'block';
+  } else {
+    portfolioBtn.style.display = 'none';
+  }
+
+  portfolioBtn.addEventListener('click', () => {
+    portfolioSection.scrollIntoView({ behavior: 'smooth' });
+  });
