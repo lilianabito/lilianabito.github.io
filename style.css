@@ -548,6 +548,33 @@ body::-webkit-scrollbar,
 }
 
 
+.figma-prototype-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.figma-prototype-btn:hover {
+  background-color: #444;
+}
+
+.figma-icon {
+  width: auto;
+  height: 20px;
+}
+
+
+
 
 
 /* blank 100 vh panel */
@@ -605,6 +632,10 @@ body::-webkit-scrollbar,
 
 .bg-project3 {
   background-color: #A492FF; /* Soft pink-purple */
+}
+
+.bg-project4 {
+  background-color: #a9db9a; /* Soft pink-purple */
 }
 
 @media (max-width: 768px) {
@@ -714,7 +745,7 @@ body::-webkit-scrollbar,
   flex-wrap: wrap;
   align-items: center;
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 160px;
 }
 
 .hero-left {
@@ -747,7 +778,7 @@ body::-webkit-scrollbar,
 }
 
 .about-block {
-  margin-bottom: 60px;
+  margin-bottom: 160px;
 }
 
 
@@ -773,6 +804,11 @@ body::-webkit-scrollbar,
   margin-bottom: 0.5rem;
 }
 
+.about-block h2 {
+  margin-bottom: 1rem;
+}
+
+
 .about-block p {
   font-size: 1rem;
   color: #444;
@@ -789,7 +825,7 @@ body::-webkit-scrollbar,
 .software-icons img {
   height: 82px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .experience-block {
@@ -842,6 +878,53 @@ body::-webkit-scrollbar,
   align-items: center;
 }
 
+.hobby-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.hobby-card {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.hobby-card:hover {
+  transform: scale(1.02);
+}
+
+.hobby-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0); /* no overlay initially */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.hobby-card:hover .hobby-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* black overlay on hover */
+}
+
+/*
 .about-hobbies {
   list-style: none;
   padding: 0;
@@ -868,6 +951,8 @@ body::-webkit-scrollbar,
   object-fit: contain;
 }
 
+*/
+
 .clients-logos {
   display: flex;
   justify-content: space-between;
@@ -882,15 +967,23 @@ body::-webkit-scrollbar,
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120px;
+  height: 160px;
   flex: 1 1 120px;
 }
 
-.client-card img {
+.client-card img.horizontal {
   max-height: 40px;
   max-width: 100%;
   object-fit: contain;
 }
+
+.client-card img.vertical {
+  max-height: 100px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
 
 
 /*Portfolio*/
