@@ -236,6 +236,17 @@ body::-webkit-scrollbar,
     height: auto; /* Allow height to expand naturally */
   }
 
+  .projects-grid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .project-thumb {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
   .thumb-image,
   .thumb-content {
     width: 100%;
@@ -290,6 +301,7 @@ body::-webkit-scrollbar,
   max-height: 70vh;
   max-width: 90%;
   object-fit: contain;
+  border-radius: 12px;
 }
 
 .project-thumb-text {
@@ -665,7 +677,7 @@ body::-webkit-scrollbar,
 }
 
 .bg-project4 {
-  background-color: #a9db9a; /* Soft pink-purple */
+  background-color: #c6e0a3; /* Soft pink-purple */
 }
 
 @media (max-width: 768px) {
@@ -753,6 +765,7 @@ body::-webkit-scrollbar,
   .project-image img {
     border-radius: 10px;
   }
+
 }
 
 
@@ -764,7 +777,7 @@ body::-webkit-scrollbar,
   display: flex;
   flex-direction: column;
   gap: 60px;
-  padding: 60px 40px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1005,6 +1018,7 @@ body::-webkit-scrollbar,
 
 .clients-logos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
 }
@@ -1033,7 +1047,11 @@ body::-webkit-scrollbar,
   object-fit: contain;
 }
 
-
+@media (max-width: 600px) {
+  .client-card {
+    flex: 0 0 calc(50% - 12px); /* 2 cards per row, accounting for 24px gap */
+  }
+}
 
 
 /*Portfolio*/
@@ -1071,6 +1089,8 @@ body::-webkit-scrollbar,
 .pdf-image:hover {
   transform: scale(1.02);
 }
+
+
 
 /*Contact form*/
 
