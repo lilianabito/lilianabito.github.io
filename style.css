@@ -435,7 +435,7 @@ body::-webkit-scrollbar,
 
 .split-number-2 {
   font-size: 1.5rem;
-  background: #7045D2;
+  background: #eb4373;
   color: #fff;
   padding: 0.3rem 0.8rem;
   border-radius: 8px;
@@ -678,7 +678,7 @@ body::-webkit-scrollbar,
 }
 
 .bg-project2 {
-  background-color: #D8C9FB; /* Soft blue */
+  background-color: #FFD8DF; /* Soft blue */
 }
 
 .bg-project3 {
